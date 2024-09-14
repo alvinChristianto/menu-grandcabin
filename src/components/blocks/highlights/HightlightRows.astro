@@ -9,6 +9,11 @@ import TextImage from '../basic/TextImage.astro'
 
 // Content
 import oriental1 from '../../../assets/foodmenu/oriental/oriental1.jpeg'
+
+import massage1 from '../../../assets/massage/massage1.jpeg'
+
+import laundry from '../../../assets/laundry/laundry.jpeg'
+
 import highlight01 from '../../../assets/highlights/highlight-01.svg'
 import highlight01mobile from '../../../assets/highlights/highlight-01-mobile.svg'
 import highlight02 from '../../../assets/highlights/highlight-02.svg'
@@ -26,6 +31,7 @@ type HighlightBlock = {
 	imageWidth: number
 	imageHeight: number
 	imagePosition: 'left' | 'right'
+	link: string
 }
 const highlightBlocks: HighlightBlock[] = [
 	{
@@ -35,34 +41,28 @@ const highlightBlocks: HighlightBlock[] = [
 		imageWidth: oriental1.width,
 		imageHeight: oriental1.height,
 		mobileImage: oriental1,
-		imagePosition: 'right'
+		imagePosition: 'right',
+		link: '/menu'
 	},
 	{
 		title: '<strong>Massage</strong> Services',
 		text: 'Automate repetitive tasks and streamline your workflow with our advanced automation tools. Save time and reduce errors by leveraging automated task assignments, workflow templates, and seamless integration with popular apps and services.',
-		image: highlight02,
-		mobileImage: highlight02mobile,
-		imageWidth: highlight02.width,
-		imageHeight: highlight02.height,
-		imagePosition: 'left'
+		image: massage1,
+		mobileImage: massage1,
+		imageWidth: massage1.width,
+		imageHeight: massage1.height,
+		imagePosition: 'left',
+		link: '/massage'
 	},
 	{
-		title: '<strong>Effective</strong> Team Collaboration',
+		title: '<strong>Clean</strong> Laundry',
 		text: 'Enhance team communication and collaboration with our seamless tools. Keep everyone on the same page and ensure efficient project execution through real-time messaging, shared document editing, and task comments. ',
-		image: highlight03,
-		mobileImage: highlight03mobile,
-		imageWidth: highlight03.width,
-		imageHeight: highlight03.height,
-		imagePosition: 'right'
-	},
-	{
-		title: 'Robust Data <strong>Security</strong>',
-		text: 'Protect your data with our robust security features. We prioritize your privacy and security to ensure that your information is always safe. With end-to-end encryption, role-based access control, and regular security audits.',
-		image: highlight04,
-		mobileImage: highlight04mobile,
-		imageWidth: highlight04.width,
-		imageHeight: highlight04.height,
-		imagePosition: 'left'
+		image: laundry,
+		mobileImage: laundry,
+		imageWidth: laundry.width,
+		imageHeight: laundry.height,
+		imagePosition: 'right',
+		link: '/laundry'
 	}
 ]
 ---
@@ -79,6 +79,7 @@ const highlightBlocks: HighlightBlock[] = [
 			mobileImage={highlight.mobileImage}
 			imagePosition={highlight.imagePosition}
 			classes={key === 0 ? '!pb-0' : key === highlightBlocks.length - 1 ? '!pt-0' : '!py-0'}
+			link={highlight.link}
 		/>
 	))
 }

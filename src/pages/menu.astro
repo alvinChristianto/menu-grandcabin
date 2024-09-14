@@ -1,0 +1,209 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+// - UI
+import Feature from '../components/blocks/featureses/FeatureSticky.astro'
+import Hero from '../components/blocks/hero/PageHeader.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+
+import Row from '../../src/components/ui/Row.astro'
+import Col from '../../src/components/ui/Col.astro'
+import StickySidebar from '../../src/components/blocks/basic/StickySidebar.astro'
+// Data
+import featuresData from '../data/json-files/featuresData.json'
+// - Feature Categories
+const menuIndonesian = featuresData.filter((feature) => feature.category === 'indonesianFood')
+const menuOriental = featuresData.filter((feature) => feature.category === 'orientalFood')
+const menuWestern = featuresData.filter((feature) => feature.category === 'westernFood')
+const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
+const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
+
+import indo1 from '../../src/assets/foodmenu/indonesian_food/indo1.jpeg'
+import indo2 from '../../src/assets/foodmenu/indonesian_food/indo2.jpeg'
+import indo3 from '../../src/assets/foodmenu/indonesian_food/indo3.jpeg'
+
+import western1 from '../../src/assets/foodmenu/western_food/western1.jpeg'
+import western2 from '../../src/assets/foodmenu/western_food/western2.jpeg'
+import western3 from '../../src/assets/foodmenu/western_food/western3.jpeg'
+
+import oriental1 from '../../src/assets/foodmenu/oriental_food/oriental1.jpeg'
+import oriental2 from '../../src/assets/foodmenu/oriental_food/oriental2.jpeg'
+import oriental3 from '../../src/assets/foodmenu/oriental_food/oriental3.jpeg'
+
+import snack1 from '../../src/assets/foodmenu/Snack/snack1.jpeg'
+import snack2 from '../../src/assets/foodmenu/Snack/snack2.jpeg'
+import snack3 from '../../src/assets/foodmenu/Snack/snack3.jpeg'
+import juice1 from '../../src/assets/foodmenu/jus/juice1.jpeg'
+
+
+// - SEO
+const SEO = {
+	title: 'Cabin | Menu Makanan di The Cabin Hotel',
+	description: 'The Cabin Hotel menyediakan berbagai menu makanan dengan harga terjangkau'
+}
+// - Page Header
+const header = {
+	title: 'Menu makanan <strong>The Cabin Hotel </strong>',
+	text: 'Menu makanan <strong>terbaik </strong> dengan harga <strong> terjangkau </strong>'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={header.title} text={header.text} />
+
+		<!-- INDONESIAN -->
+	<StickySidebar>
+		<header slot="sidebar">
+			<h3 class="text-3xl">Indonesian Food</h3>
+			<p class="text-lg leading-relaxed">Deskripsi</p>
+		</header>
+
+		<Row>
+			<Col span="6">
+				<Image
+					src={indo1}
+					alt="Foxi. The tailwind astro theme"
+					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+					format="webp"
+				/>
+			</Col>
+			<Col span="6">
+				<Image
+					src={indo2}
+					alt="Foxi. The tailwind astro theme"
+					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+					format="webp"
+				/>
+			</Col>
+			<Col span="6">
+				<Image
+					src={indo3}
+					alt="Foxi. The tailwind astro theme"
+					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+					format="webp"
+				/>
+			</Col>
+		</Row>
+		
+	</StickySidebar>
+
+	<!-- ORIENTAL -->
+		<StickySidebar>
+			<header slot="sidebar">
+				<h3 class="text-3xl">Oriental Food</h3>
+				<p class="text-lg leading-relaxed">Deskripsi</p>
+			</header>
+	
+			<Row>
+				<Col span="6">
+					<Image
+						src={oriental1}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+				<Col span="6">
+					<Image
+						src={oriental2}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+				<Col span="6">
+					<Image
+						src={oriental3}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+			</Row>
+			
+		</StickySidebar>
+
+		<!-- WESTERN -->
+		<StickySidebar>
+			<header slot="sidebar">
+				<h3 class="text-3xl">Western Food</h3>
+				<p class="text-lg leading-relaxed">Deskripsi</p>
+			</header>
+	
+			<Row>
+				<Col span="6">
+					<Image
+						src={western1}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+				<Col span="6">
+					<Image
+						src={western2}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+				<Col span="6">
+					<Image
+						src={western3}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+			</Row>
+			
+		</StickySidebar>
+
+		<!-- WESTERN -->
+		<StickySidebar>
+			<header slot="sidebar">
+				<h3 class="text-3xl">Snack And Juice</h3>
+				<p class="text-lg leading-relaxed">Deskripsi</p>
+			</header>
+	
+			<Row>
+				<Col span="6">
+					<Image
+						src={juice1}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+				<Col span="6">
+					<Image
+						src={snack1}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+				<Col span="6">
+					<Image
+						src={snack2}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+				<Col span="6">
+					<Image
+						src={snack3}
+						alt="Foxi. The tailwind astro theme"
+						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+						format="webp"
+					/>
+				</Col>
+			</Row>
+			
+		</StickySidebar>
+
+	<CTA />
+</Layout>

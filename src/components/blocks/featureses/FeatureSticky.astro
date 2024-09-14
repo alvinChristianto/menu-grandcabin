@@ -14,7 +14,7 @@ import Feature from '../../ui/Feature.astro'
 // Props
 type FeatureData = {
 	title: string
-	icon: string
+	image: string
 	description: string
 }
 type Props = {
@@ -34,14 +34,17 @@ const { title, text, data, classes } = Astro.props
 
 	<Row>
 		{
-			// Map through the filtered features and render them
 			data.map((feature: FeatureData) => (
-				<Col span="4">
-					<Feature title={feature.title} icon={feature.icon} align="left" classes="mb-12">
+				<Col span="6">
+					{/* <Feature title={feature.title} icon={feature.icon} align="left" classes="mb-12">
 						{feature.description}
-					</Feature>
+					</Feature> */}
+
+					{feature.title}
 				</Col>
 			))
-		}
+		} 
+
+
 	</Row>
 </StickySidebar>

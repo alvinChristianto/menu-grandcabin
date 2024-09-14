@@ -5,9 +5,12 @@
 
 // Components
 // - Layout
+import { Image } from 'astro:assets'
 import Section from '../../ui/Section.astro'
 import Row from '../../ui/Row.astro'
 import Col from '../../ui/Col.astro'
+
+import wabutton from '../../../../src/assets/WhatsAppButtonGreenLarge.png'
 
 // Props
 type Props = {
@@ -25,16 +28,27 @@ const { id = 'intro', title, text, classes } = Astro.props
 			<header class="page-header">
 				<h1 class="page-header__title" set:html={title} />
 				<p class="page-header__text" set:html={text} />
+				<div class="flex items-center justify-center ">
+					<a aria-label="Chat on WhatsApp" href="https://wa.me/1XXXXXXXXXX" class="w-[200px] md:w-[250px] hover:scale-105 duration-200">
+						<Image
+							src={wabutton}
+							alt="Foxi. The tailwind astro theme"
+							class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+							format="webp"
+						/>
+						<a></a>
+					</a>
+				</div>
 			</header>
 		</Col>
 	</Row>
-</Section>
 
-<style>
-	.page-header {
-		@apply mx-auto max-w-3xl;
-	}
-	.page-header__text {
-		@apply text-lg leading-relaxed;
-	}
-</style>
+	<style>
+		.page-header {
+			@apply mx-auto max-w-3xl;
+		}
+		.page-header__text {
+			@apply text-lg leading-relaxed;
+		}
+	</style>
+</Section>

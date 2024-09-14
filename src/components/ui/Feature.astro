@@ -19,12 +19,12 @@ import { Icon } from 'astro-icon/components'
 type Props = {
 	type?: 'top-icon' | 'side-icon'
 	title?: string
-	icon?: string
+	image?: string
 	iconStyle?: 'normal' | 'square'
 	align?: 'left' | 'center'
 	classes?: string
 }
-const { type = 'top-icon', title, icon = 'rocket', iconStyle, align, classes } = Astro.props
+const { type = 'top-icon', title, image = 'rocket', iconStyle, align, classes } = Astro.props
 ---
 
 <div
@@ -36,7 +36,7 @@ const { type = 'top-icon', title, icon = 'rocket', iconStyle, align, classes } =
 	]}
 >
 	<Icon
-		name=`${icon}`
+		name=`device-phone-mobile`
 		class:list={[
 			'shrink-0',
 			{ [`size-6 text-primary-500`]: iconStyle != 'square' },

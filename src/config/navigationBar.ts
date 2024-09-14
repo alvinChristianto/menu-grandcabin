@@ -18,29 +18,29 @@ export interface NavItem {
 	submenu?: NavSubItem[]
 }
 
-export interface NavAction {
-	name: string
-	link: string
-	style: string
-	size: string
-}
+// export interface NavAction {
+// 	name: string
+// 	link: string
+// 	style: string
+// 	size: string
+// }
 
 export interface NavData {
 	logo: Logo
 	navItems: NavItem[]
-	navActions: NavAction[]
+	// navActions: NavAction[]
 }
 
 export const navigationBarData: NavData = {
 	logo: {
-		src: '/logo.svg',
-		alt: 'The tailwind astro theme',
-		text: 'Foxi.'
+		src: '/koala_logo.png',
+		alt: 'Service The Cabin',
+		text: 'ServiceCabin'
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
 		{ name: 'Pricing', link: '/pricing' },
-		{ name: 'Features', link: '/features' },
+		{ name: 'Menu Makanan', link: '/menu' },
 		{
 			name: 'Resources',
 			link: '#',
@@ -52,6 +52,6 @@ export const navigationBarData: NavData = {
 			]
 		},
 		{ name: 'Contact', link: '/contact' }
-	],
-	navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
+	]
+	// navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
 }
