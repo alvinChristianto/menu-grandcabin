@@ -21,10 +21,10 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'Service di The Cabin hotel',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
-	ogImage: '/og.jpg',
+		'The Cabin Hotel menyediakan berbagai layanan atau service seperti menu makanan, massage dan laundry',
+	ogImage: '/og.jpeg',
 	logo: {
 		src: '/koala_logo.png',
 		alt: 'Service The Cabin'
