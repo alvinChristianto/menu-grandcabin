@@ -24,7 +24,7 @@ export const configData: Config = {
 	siteTitle: 'Service di The Cabin hotel',
 	siteDescription:
 		'The Cabin Hotel menyediakan berbagai layanan atau service seperti menu makanan, massage dan laundry',
-	ogImage: '/og.jpeg',
+	ogImage: 'https://menugrandcabin.vercel.app/_astro/indo3.ukl4FyKb_Zo9u3D.webp',
 	logo: {
 		src: '/koala_logo.png',
 		alt: 'Service The Cabin'
