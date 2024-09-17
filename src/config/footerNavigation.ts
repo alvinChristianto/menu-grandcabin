@@ -35,9 +35,9 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Foxi.',
+		title: 'thecabinhotelgroup.',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'Berbagai layanan di the Grand Cabin Hotel',
 		logo: {
 			src: '/koala_logo.png',
 			alt: 'Service The Cabin',
@@ -49,25 +49,17 @@ export const footerNavigationData: FooterData = {
 			category: 'Product',
 			subCategories: [
 				{
-					subCategory: 'Features',
-					subCategoryLink: '/features'
+					subCategory: 'Menu Makanan',
+					subCategoryLink: '/menu'
 				},
 				{
-					subCategory: 'FAQ',
-					subCategoryLink: '/faq'
+					subCategory: 'Massage Service',
+					subCategoryLink: '/massage'
 				},
 				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
+					subCategory: 'Laundry',
+					subCategoryLink: '/laundry'
 				},
-				{
-					subCategory: 'Changelog',
-					subCategoryLink: '/changelog'
-				},
-				{
-					subCategory: 'Terms',
-					subCategoryLink: '/terms'
-				}
 			]
 		},
 		{
@@ -77,35 +69,19 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'About us',
 					subCategoryLink: '/'
 				},
-				{
-					subCategory: 'News',
-					subCategoryLink: '/blog'
-				},
-				{
-					subCategory: 'Careers',
-					subCategoryLink: '/blog'
-				}
+				// {
+				// 	subCategory: 'News',
+				// 	subCategoryLink: '/blog'
+				// },
+				// {
+				// 	subCategory: 'Careers',
+				// 	subCategoryLink: '/blog'
+				// }
 			]
 		},
-		{
-			category: 'Get in touch',
-			subCategories: [
-				{
-					subCategory: 'Contact',
-					subCategoryLink: '/contact'
-				},
-				{
-					subCategory: 'Support',
-					subCategoryLink: '/contact'
-				},
-				{
-					subCategory: 'Join us',
-					subCategoryLink: '/contact'
-				}
-			]
-		}
+		
 	],
 	subFooter: {
-		copywriteText: '© Foxi 2024.'
+		copywriteText: '© cabin hotel 2024.'
 	}
 }

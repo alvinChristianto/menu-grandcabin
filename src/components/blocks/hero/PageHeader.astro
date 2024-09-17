@@ -17,9 +17,10 @@ type Props = {
 	id?: string
 	title?: string
 	text?: string
+	type?: string
 	classes?: string
 }
-const { id = 'intro', title, text, classes } = Astro.props
+const { id = 'intro', title, text, type, classes } = Astro.props
 ---
 
 <Section id={id} classes=`bg-neutral-50 dark:bg-neutral-900 ${classes}`>
@@ -29,7 +30,7 @@ const { id = 'intro', title, text, classes } = Astro.props
 				<h1 class="page-header__title" set:html={title} />
 				<p class="page-header__text" set:html={text} />
 				<div class="flex items-center justify-center ">
-					<a aria-label="Chat on WhatsApp" href="https://wa.me/6285729577104?text=Halo,%20saya%20ingin%20bertanya%20memesan%20service%20The%20Cabin%20"
+					<a aria-label="Chat on WhatsApp" href={`https://wa.me/6285729577104?text=Halo,%20saya%20ingin%20memesan%20service%20The%20Cabin%20terkait%20${type}`}
 					class="w-[200px] md:w-[250px] hover:scale-105 duration-200">
 						<Image
 							src={wabutton}

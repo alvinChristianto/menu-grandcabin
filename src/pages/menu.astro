@@ -11,14 +11,8 @@ import CTA from '../components/blocks/CTA/BasicDark.astro'
 import Row from '../../src/components/ui/Row.astro'
 import Col from '../../src/components/ui/Col.astro'
 import StickySidebar from '../../src/components/blocks/basic/StickySidebar.astro'
-// Data
+// Data NOT USED
 import featuresData from '../data/json-files/featuresData.json'
-// - Feature Categories
-const menuIndonesian = featuresData.filter((feature) => feature.category === 'indonesianFood')
-const menuOriental = featuresData.filter((feature) => feature.category === 'orientalFood')
-const menuWestern = featuresData.filter((feature) => feature.category === 'westernFood')
-const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
-const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
 
 import indo1 from '../../src/assets/foodmenu/indonesian_food/indo1.jpeg'
 import indo2 from '../../src/assets/foodmenu/indonesian_food/indo2.jpeg'
@@ -46,12 +40,13 @@ const SEO = {
 // - Page Header
 const header = {
 	title: 'Menu makanan <strong>The Cabin Hotel </strong>',
-	text: 'Menu makanan <strong>terbaik </strong> dengan harga <strong> terjangkau </strong>'
+	text: 'Menu makanan <strong>terbaik </strong> dengan harga <strong> terjangkau </strong>',
+	type: "Makanan dan minuman"
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero title={header.title} text={header.text} />
+	<Hero title={header.title} text={header.text} type={header.type}/>
 
 		<!-- INDONESIAN -->
 	<StickySidebar>
@@ -205,5 +200,5 @@ const header = {
 			
 		</StickySidebar>
 
-	<CTA />
+	<!-- <CTA /> -->
 </Layout>
