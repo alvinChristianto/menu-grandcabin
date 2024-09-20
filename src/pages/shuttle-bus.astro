@@ -1,0 +1,64 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+// - UI
+import Feature from '../components/blocks/featureses/FeatureSticky.astro'
+import Hero from '../components/blocks/hero/PageHeader.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+import StickySidebar from '../components/blocks/basic/StickySidebar.astro'
+// Data
+import featuresData from '../data/json-files/featuresData.json'
+// - Feature Categories
+const menuIndonesian = featuresData.filter((feature) => feature.category === 'indonesianFood')
+const menuOriental = featuresData.filter((feature) => feature.category === 'orientalFood')
+const menuWestern = featuresData.filter((feature) => feature.category === 'westernFood')
+const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
+const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
+
+import bike1 from '../../src/assets/bikerent/bike1.jpeg'
+
+
+// - SEO
+const SEO = {
+	title: 'Cabin | Shuttle bus di The Grand Cabin Hotel',
+	description: 'The Grand Cabin Hotel menyediakan layanan Shuttle bus untuk pengunjung'
+}
+// - Page Header
+const header = {
+	title: 'Shuttle bus <strong>The Grand Cabin Hotel </strong>',
+	text: 'Shuttle bus <strong>terbaik </strong> dengan harga <strong> terjangkau </strong>',
+	type: "Shuttle bus"
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={header.title} text={header.text} type={header.type} />
+
+		<!-- MASSAGE -->
+	<StickySidebar>
+		<header slot="sidebar">
+			<h3 class="text-3xl">Shuttle bus</h3>
+			<p class="text-lg leading-relaxed">Deskripsi</p>
+		</header>
+
+		<Row>
+			
+			<Col span="6">
+				<Image
+					src={bike1}
+					alt="Foxi. The tailwind astro theme"
+					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+					format="webp"
+				/>
+			</Col>
+		</Row>
+		
+	</StickySidebar>
+
+	<!-- <CTA /> -->
+</Layout>

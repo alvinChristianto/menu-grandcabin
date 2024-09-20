@@ -42,6 +42,8 @@ export const navigationBarData: NavData = {
 		{ name: 'Menu Makanan', link: '/menu' },
 		{ name: 'Massage', link: '/massage' },
 		{ name: 'Laundry', link: '/laundry' },
+		{ name: 'Bike Rent', link: '/bikerent' },
+		{ name: 'Shuttle', link: '/shuttle-bus' },
 		
 	]
 	// navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
