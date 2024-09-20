@@ -31,7 +31,6 @@ import snack2 from '../../src/assets/foodmenu/Snack/snack2.jpeg'
 import snack3 from '../../src/assets/foodmenu/Snack/snack3.jpeg'
 import juice1 from '../../src/assets/foodmenu/jus/juice1.jpeg'
 
-
 // - SEO
 const SEO = {
 	title: 'Cabin | Menu Makanan di The Grand Cabin Hotel',
@@ -41,14 +40,104 @@ const SEO = {
 const header = {
 	title: 'Menu makanan <strong>The Grand Cabin Hotel </strong>',
 	text: 'Menu makanan <strong>terbaik </strong> dengan harga <strong> terjangkau </strong>',
-	type: "Makanan dan minuman"
+	type: 'Makanan dan minuman'
 }
+
+const indonesianfood = [
+	{
+		image: indo1,
+		text: ``,
+		name: 'Nasi Soto Ayam',
+		price: '20.000'
+	},
+	{
+		image: indo2,
+		text: ``,
+		name: 'Nasi Goreng Spesial',
+		price: '20.000'
+	},
+	{
+		image: indo3,
+		text: ``,
+		name: 'Nasi Sop Iga',
+		price: '20.000'
+	}
+]
+
+const orientalfood = [
+	{
+		image: oriental1,
+		text: ``,
+		name: 'Nasi Capcay Special',
+		price: '20.000'
+	},
+	{
+		image: oriental2,
+		text: ``,
+		name: 'Ayam Mentega Special',
+		price: '20.000'
+	},
+	{
+		image: oriental3,
+		text: ``,
+		name: 'Beef Lada Hitam',
+		price: '20.000'
+	}
+]
+
+const westernfood = [
+	{
+		image: western1,
+		text: ``,
+		name: 'Cordon Blew',
+		price: '20.000'
+	},
+	{
+		image: western2,
+		text: ``,
+		name: 'Fish And Chips',
+		price: '20.000'
+	},
+	{
+		image: western3,
+		text: ``,
+		name: 'Chicken Marryland',
+		price: '20.000'
+	}
+]
+
+const snackjuice = [
+	{
+		image: juice1,
+		text: ``,
+		name: '',
+		price: ''
+	},
+	{
+		image: snack1,
+		text: ``,
+		name: '',
+		price: ''
+	},
+	{
+		image: snack2,
+		text: ``,
+		name: '',
+		price: ''
+	},
+	{
+		image: snack3,
+		text: ``,
+		name: '',
+		price: ''
+	}
+]
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero title={header.title} text={header.text} type={header.type}/>
+	<Hero title={header.title} text={header.text} type={header.type} />
 
-		<!-- INDONESIAN -->
+	<!-- INDONESIAN -->
 	<StickySidebar>
 		<header slot="sidebar">
 			<h3 class="text-3xl">Indonesian Food</h3>
@@ -56,149 +145,126 @@ const header = {
 		</header>
 
 		<Row>
-			<Col span="6">
-				<Image
-					src={indo1}
-					alt="Foxi. The tailwind astro theme"
-					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-					format="webp"
-				/>
-			</Col>
-			<Col span="6">
-				<Image
-					src={indo2}
-					alt="Foxi. The tailwind astro theme"
-					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-					format="webp"
-				/>
-			</Col>
-			<Col span="6">
-				<Image
-					src={indo3}
-					alt="Foxi. The tailwind astro theme"
-					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-					format="webp"
-				/>
-			</Col>
+			{
+				indonesianfood.map((item) => (
+					<Col span="6">
+						<Image
+							src={item.image}
+							alt="Foxi. The tailwind astro theme"
+							class="shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+							format="webp"
+						/>
+						<div class="flex flex-col items-center justify-center">
+							<div class="flex flex-row items-center justify-center gap-x-2">
+								<p class="pt-4 text-xl font-semibold">{item.name}</p>
+								<button class="rounded-full bg-slate-200 px-4 py-2 text-slate-900 shadow-md shadow-slate-500 duration-150 hover:shadow-slate-600">
+									Rp {item.price}
+								</button>
+							</div>
+							<p class="text-center">{item.text}</p>
+						</div>
+					</Col>
+				))
+			}
 		</Row>
-		
 	</StickySidebar>
 
 	<!-- ORIENTAL -->
-		<StickySidebar>
-			<header slot="sidebar">
-				<h3 class="text-3xl">Oriental Food</h3>
-				<p class="text-lg leading-relaxed">Deskripsi</p>
-			</header>
-	
-			<Row>
-				<Col span="6">
-					<Image
-						src={oriental1}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-				<Col span="6">
-					<Image
-						src={oriental2}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-				<Col span="6">
-					<Image
-						src={oriental3}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-			</Row>
-			
-		</StickySidebar>
+	<StickySidebar>
+		<header slot="sidebar">
+			<h3 class="text-3xl">Oriental Food</h3>
+			<p class="text-lg leading-relaxed">Deskripsi</p>
+		</header>
 
-		<!-- WESTERN -->
-		<StickySidebar>
-			<header slot="sidebar">
-				<h3 class="text-3xl">Western Food</h3>
-				<p class="text-lg leading-relaxed">Deskripsi</p>
-			</header>
-	
-			<Row>
-				<Col span="6">
-					<Image
-						src={western1}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-				<Col span="6">
-					<Image
-						src={western2}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-				<Col span="6">
-					<Image
-						src={western3}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-			</Row>
-			
-		</StickySidebar>
+		<Row>
+			{
+				orientalfood.map((item) => (
+					<Col span="6">
+						<Image
+							src={item.image}
+							alt="Foxi. The tailwind astro theme"
+							class="shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+							format="webp"
+						/>
+						<div class="flex flex-col items-center justify-center">
+							<div class="flex flex-row items-center justify-center gap-x-2">
+								<p class="pt-4 text-xl font-semibold">{item.name}</p>
+								<button class="rounded-full bg-slate-200 px-4 py-2 text-slate-900 shadow-md shadow-slate-500 duration-150 hover:shadow-slate-600">
+									Rp {item.price}
+								</button>
+							</div>
+							<p class="text-center">{item.text}</p>
+						</div>
+					</Col>
+				))
+			}
+		</Row>
+	</StickySidebar>
 
-		<!-- WESTERN -->
-		<StickySidebar>
-			<header slot="sidebar">
-				<h3 class="text-3xl">Snack And Juice</h3>
-				<p class="text-lg leading-relaxed">Deskripsi</p>
-			</header>
-	
-			<Row>
-				<Col span="6">
-					<Image
-						src={juice1}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-				<Col span="6">
-					<Image
-						src={snack1}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-				<Col span="6">
-					<Image
-						src={snack2}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-				<Col span="6">
-					<Image
-						src={snack3}
-						alt="Foxi. The tailwind astro theme"
-						class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-						format="webp"
-					/>
-				</Col>
-			</Row>
-			
-		</StickySidebar>
+	<!-- WESTERN -->
+	<StickySidebar>
+		<header slot="sidebar">
+			<h3 class="text-3xl">Western Food</h3>
+			<p class="text-lg leading-relaxed">Deskripsi</p>
+		</header>
+
+		<Row>
+			{
+				westernfood.map((item) => (
+					<Col span="6">
+						<Image
+							src={item.image}
+							alt="Foxi. The tailwind astro theme"
+							class="shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+							format="webp"
+						/>
+						<div class="flex flex-col items-center justify-center">
+							<div class="flex flex-row items-center justify-center gap-x-2">
+								<p class="pt-4 text-xl font-semibold">{item.name}</p>
+								<button class="rounded-full bg-slate-200 px-4 py-2 text-slate-900 shadow-md shadow-slate-500 duration-150 hover:shadow-slate-600">
+									Rp {item.price}
+								</button>
+							</div>
+							<p class="text-center">{item.text}</p>
+						</div>
+					</Col>
+				))
+			}
+		</Row>
+	</StickySidebar>
+
+	<!-- WESTERN -->
+	<StickySidebar>
+		<header slot="sidebar">
+			<h3 class="text-3xl">Snack And Juice</h3>
+			<p class="text-lg leading-relaxed">Deskripsi</p>
+		</header>
+
+		<Row>
+			{
+				snackjuice.map((item) => (
+					<Col span="6">
+						<Image
+							src={item.image}
+							alt="Foxi. The tailwind astro theme"
+							class="shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+							format="webp"
+						/>
+{/* 
+						<div class="flex flex-col items-center justify-center">
+							<div class="flex flex-row items-center justify-center gap-x-2">
+								<p class="pt-4 text-xl font-semibold">{item.name}</p>
+								<button class="rounded-full bg-slate-200 px-4 py-2 text-slate-900 shadow-md shadow-slate-500 duration-150 hover:shadow-slate-600">
+									{item.price}
+								</button>
+							</div>
+							<p class="text-center">{item.text}</p>
+						</div> */}
+					</Col>
+				))
+			}
+		</Row>
+	</StickySidebar>
 
 	<!-- <CTA /> -->
 </Layout>

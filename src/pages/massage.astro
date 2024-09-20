@@ -23,7 +23,6 @@ const featuresSupport = featuresData.filter((feature) => feature.category === 'S
 import massage1 from '../../src/assets/massage/massage1.jpeg'
 import massage2 from '../../src/assets/massage/massage2.jpeg'
 
-
 // - SEO
 const SEO = {
 	title: 'Cabin | Massage service di The Grand Cabin Hotel',
@@ -33,14 +32,14 @@ const SEO = {
 const header = {
 	title: 'Massage <strong>The Grand Cabin Hotel </strong>',
 	text: 'Massage service <strong>terbaik </strong> dengan harga <strong> terjangkau </strong>',
-	type: "massage service"
+	type: 'massage service'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} type={header.type} />
 
-		<!-- MASSAGE -->
+	<!-- MASSAGE -->
 	<StickySidebar>
 		<header slot="sidebar">
 			<h3 class="text-3xl">Massage service</h3>
@@ -52,20 +51,19 @@ const header = {
 				<Image
 					src={massage1}
 					alt="Foxi. The tailwind astro theme"
-					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+					class="shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
 					format="webp"
 				/>
-			</Col>
-			<Col span="6">
-				<Image
-					src={massage2}
-					alt="Foxi. The tailwind astro theme"
-					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-					format="webp"
-				/>
+				<div class="py-2">
+					<p class="text-xl text-slate-900 dark:text-slate-200">Full Body Massage</p>
+					<ul class="list-inside list-disc text-slate-900 dark:text-slate-200">
+						<li>90 Menit (Rp 200.000)</li>
+						<li>120 Menit (Rp 250.000)</li>
+						<li>180 Menit (Rp 300.000)</li>
+					</ul>
+				</div>
 			</Col>
 		</Row>
-		
 	</StickySidebar>
 
 	<!-- <CTA /> -->

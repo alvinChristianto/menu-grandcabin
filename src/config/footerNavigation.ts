@@ -60,6 +60,14 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'Laundry',
 					subCategoryLink: '/laundry'
 				},
+				{
+					subCategory: 'Bike Rent',
+					subCategoryLink: '/bikerent'
+				},
+				{
+					subCategory: 'Shuttle bus',
+					subCategoryLink: '/shuttle-bus'
+				},
 			]
 		},
 		{
