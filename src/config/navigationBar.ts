@@ -35,7 +35,7 @@ export const navigationBarData: NavData = {
 	logo: {
 		src: '/koala_logo.png',
 		alt: 'Service The Grand Cabin Hotel',
-		text: 'ServiceCabin'
+		text: 'GrandCabin'
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
