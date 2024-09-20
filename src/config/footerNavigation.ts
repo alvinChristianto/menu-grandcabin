@@ -40,7 +40,7 @@ export const footerNavigationData: FooterData = {
 			'Berbagai layanan di the Grand Cabin Hotel',
 		logo: {
 			src: '/koala_logo.png',
-			alt: 'Service The Cabin',
+			alt: 'Service The Grand Cabin Hotels',
 			text: 'ServiceCabin'
 		}
 	},

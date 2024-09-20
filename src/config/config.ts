@@ -21,13 +21,13 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Service di The Cabin hotel',
+	siteTitle: 'Service di The Grand Cabin Hotel',
 	siteDescription:
-		'The Cabin Hotel menyediakan berbagai layanan atau service seperti menu makanan, massage dan laundry',
+		'The Grand Cabin Hotel menyediakan berbagai layanan atau service seperti menu makanan, massage dan laundry',
 	ogImage: 'https://menugrandcabin.vercel.app/_astro/indo3.ukl4FyKb_Zo9u3D.webp',
 	logo: {
 		src: '/koala_logo.png',
-		alt: 'Service The Cabin'
+		alt: 'Service The Grand Cabin Hotel'
 	},
 	canonical: true,
 	noindex: false,

@@ -21,17 +21,17 @@ const featuresIntegrations = featuresData.filter((feature) => feature.category =
 const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
 
 import laundry1 from '../../src/assets/laundry/laundry.jpeg'
-
+import laundry2 from '../../src/assets/laundry/laundry1.jpeg'
 
 // - SEO
 const SEO = {
-	title: 'Cabin | Laundry service di The Cabin Hotel',
-	description: 'The Cabin Hotel menyediakan layanan Laundry service untuk pengunjung'
+	title: 'Cabin | Laundry service di The Grand Cabin Hotel',
+	description: 'The Grand Cabin Hotel menyediakan layanan Laundry service untuk pengunjung'
 }
 // - Page Header
 const header = {
-	title: 'Laundry service <strong>The Cabin Hotel </strong>',
-	text: 'Layanan Laundry service <strong> The Cabin Hotel</strong>',
+	title: 'Laundry service <strong>The Grand Cabin Hotel </strong>',
+	text: 'Layanan Laundry service <strong> The Grand Cabin Hotel</strong>',
 	type: "Laundry"
 }
 ---
@@ -47,6 +47,14 @@ const header = {
 		</header>
 
 		<Row>
+			<Col span="6">
+				<Image
+					src={laundry2}
+					alt="Foxi. The tailwind astro theme"
+					class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
+					format="webp"
+				/>
+			</Col>
 			<Col span="6">
 				<Image
 					src={laundry1}

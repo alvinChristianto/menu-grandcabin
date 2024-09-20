@@ -34,7 +34,7 @@ export interface NavData {
 export const navigationBarData: NavData = {
 	logo: {
 		src: '/koala_logo.png',
-		alt: 'Service The Cabin',
+		alt: 'Service The Grand Cabin Hotel',
 		text: 'ServiceCabin'
 	},
 	navItems: [
