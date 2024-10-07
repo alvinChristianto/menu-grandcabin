@@ -45,6 +45,111 @@ const laundryItem = [
 		text: `test`
 	}
 ]
+
+const wetDryClean = [
+	{
+		item: 'Setelah Jas',
+		wetClean: '120.000',
+		dryClean: '120.000',
+		pressing: '120.000'
+	},
+	{
+		item: 'Jas',
+		wetClean: '75.000',
+		dryClean: '84.000',
+		pressing: '45.000'
+	},
+	{
+		item: 'Setelah Safari PDL',
+		wetClean: '105.000',
+		dryClean: '114.000',
+		pressing: '51.000'
+	},
+	{
+		item: 'Baju Safari',
+		wetClean: '60.000',
+		dryClean: '69.000',
+		pressing: '30.000'
+	},
+	{
+		item: 'Kemeja',
+		wetClean: '60.000',
+		dryClean: '69.000',
+		pressing: '30.000'
+	},
+	{
+		item: 'Blus',
+		wetClean: '51.000',
+		dryClean: '60.000',
+		pressing: '30.000'
+	},
+	{
+		item: 'Baju Muslim Setumit',
+		wetClean: '90.000',
+		dryClean: '99.000',
+		pressing: '45.000'
+	},
+	{
+		item: 'Jaket',
+		wetClean: '66.000',
+		dryClean: '75.000',
+		pressing: '36.000'
+	},
+	{
+		item: 'Celana Panjang',
+		wetClean: '60.000',
+		dryClean: '69.000',
+		pressing: '30.000'
+	},
+	{
+		item: 'Celana Pendek',
+		wetClean: '45.000',
+		dryClean: '54.000',
+		pressing: '39.000'
+	},
+	{
+		item: 'Rok Panjang',
+		wetClean: '60.000',
+		dryClean: '69.000',
+		pressing: '30.000'
+	},
+	{
+		item: 'Rok Pendek',
+		wetClean: '45.000',
+		dryClean: '54.000',
+		pressing: '39.000'
+	},
+	{
+		item: 'Jarik',
+		wetClean: '45.000',
+		dryClean: '54.000',
+		pressing: '39.000'
+	},
+	{
+		item: 'Kebaya',
+		wetClean: '54.000',
+		dryClean: '63.000',
+		pressing: '30.000'
+	},
+	{
+		item: 'Kebaya Variasi',
+		wetClean: '-',
+		dryClean: '135.000',
+		pressing: '90.000'
+	},
+	{
+		item: 'Sarung/Kemben',
+		wetClean: '60.000',
+		dryClean: '69.000',
+		pressing: '30.000'
+	},
+	{
+		item: 'Sarung Tenun/Songket',
+		wetClean: '-',
+		dryClean: '105.000',
+		pressing: '51.000'
+	}
+]
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -54,44 +159,93 @@ const laundryItem = [
 	<StickySidebar>
 		<header slot="sidebar">
 			<h3 class="text-3xl">Laundry</h3>
-			<p class="text-lg leading-relaxed">Kami menyediakan layanan laundry yang praktis dan cepat. Serahkan pakaian kotor Anda kepada kami dan dapatkan kembali pakaian bersih dalam waktu singkat.</p>
+			<p class="text-lg leading-relaxed">
+				Kami menyediakan layanan laundry yang praktis dan cepat. Serahkan pakaian kotor Anda kepada
+				kami dan dapatkan kembali pakaian bersih dalam waktu singkat.
+			</p>
 		</header>
 
 		<Row>
-			<Col span="6">
+			<Col span="9">
 				<Image
 					src={laundry2}
 					alt="Foxi. The tailwind astro theme"
 					class="shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
 					format="webp"
 				/>
-				<div class="py-2">
-					<p class="text-xl text-slate-900 dark:text-slate-200">Cuci Setrika</p>
-					<ul class="list-inside list-disc text-slate-900 dark:text-slate-200">
-						<li>3 hari (10.000 / Kg)</li>
-						<li>2 hari (12.000 / Kg)</li>
-						<li>24 hari (16.000 / Kg)</li>
-						<li>6 jam (24.000 / Kg)</li>
-						<li>4 jam (30.000 / Kg)</li>
-					</ul>
+				<div class="flex">
+					<div class="flex-1 py-2">
+						<p class="text-xl text-slate-900 dark:text-slate-200">Cuci Kering*</p>
+						<ul class="list-inside list-disc text-slate-900 dark:text-slate-200">
+							<li>4 hari (10.500 / Kg)</li>
+							<li>3 hari (12.000 / Kg)</li>
+							<li>2 hari (13.500 / Kg)</li>
+							<li>24 hari (16.500 / Kg)</li>
+							<li>10 jam (21.000 / Kg)</li>
+							<li>6 jam (25.500 / Kg)</li>
+							<li>4 jam (38.000 / Kg)</li>
+						</ul>
+					</div>
+
+					<div class="flex-1 py-2">
+						<p class="text-xl text-slate-900 dark:text-slate-200">Setrika Only*</p>
+						<ul class="list-inside list-disc text-slate-900 dark:text-slate-200">
+							<li>4 hari (10.500 / Kg)</li>
+							<li>3 hari (12.000 / Kg)</li>
+							<li>2 hari (13.500 / Kg)</li>
+							<li>24 hari (16.500 / Kg)</li>
+							<li>10 jam (21.000 / Kg)</li>
+							<li>6 jam (25.500 / Kg)</li>
+							<li>4 jam (38.000 / Kg)</li>
+						</ul>
+					</div>
 				</div>
 				<div class="py-2">
-					<p class="text-xl text-slate-900 dark:text-slate-200">Cuci Kering</p>
+					<p class="text-xl text-slate-900 dark:text-slate-200">Cuci Setrika*</p>
 					<ul class="list-inside list-disc text-slate-900 dark:text-slate-200">
-						<li>3 hari (7.000 / Kg)</li>
-						<li>2 hari (8.000 / Kg)</li>
-						<li>24 hari (10.000 / Kg)</li>
-						<li>6 jam (20.000 / Kg)</li>
-						<li>4 jam (34.000 / Kg)</li>
+						<li>4 hari (15.000 / Kg)</li>
+						<li>3 hari (16.500 / Kg)</li>
+						<li>2 hari (19.500 / Kg)</li>
+						<li>24 hari (25.500 / Kg)</li>
+						<li>10 jam (36.000 / Kg)</li>
+						<li>6 jam (45.000 / Kg)</li>
+						<li>4 jam (51.000 / Kg)</li>
 					</ul>
 				</div>
+				
+				<div class="pt-8">
+					<p class="text-base italic text-slate-900 dark:text-slate-200">*minimal 3kg</p>
+				</div>
+			</Col>
+
+			<Col span="9">
+				<hr class="border-1 border-slate-200 pb-2" />
+
 				<div class="py-2">
-					<p class="text-xl text-slate-900 dark:text-slate-200">Cuci Basah</p>
-					<ul class="list-inside list-disc text-slate-900 dark:text-slate-200">
-						<li>Drop pagi, ambil malam (10.000 / Kg)</li>
-						<li>6 jam (16.000 / Kg)</li>
-						<li>4 jam (20.000 / Kg)</li>
-					</ul>
+					<p class="text-xl text-slate-900 dark:text-slate-200">Wet Clean & Dry Clean</p>
+					<table class="table-fixed w-full">
+						<thead>
+							<tr class="">
+								<th>Item</th>
+								<th>Wet Clean</th>
+								<th>Dry Clean</th>
+								<th>Pressing</th>
+							</tr>
+						</thead>
+						<tbody>
+							{
+								wetDryClean.map((item) => (
+									<tr class="">
+										<td>{item.item}</td>
+										<td>Rp {item.wetClean}</td>
+										<td>Rp {item.dryClean}</td>
+										<td>Rp {item.pressing}</td>
+									</tr>
+								))
+							}
+							
+						</tbody>
+					</table>
 				</div>
 			</Col>
 		</Row>
